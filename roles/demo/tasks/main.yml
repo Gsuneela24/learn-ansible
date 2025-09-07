@@ -1,0 +1,3 @@
+- name: roles example
+  ansible.builtin.debug:
+    url - {{ url }}
