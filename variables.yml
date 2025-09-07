@@ -1,6 +1,7 @@
  #in ansible variables can be declared  at multiple levels
  #In ansible variables can be accessed with {{ }} and ${}
- - name : Play level variables
+
+-  name : Play level variables
    hosts: all
    vars:
      msg : play.example.com
@@ -11,7 +12,7 @@
 
 
 
- -  name : Task level variables
+-   name : Task level variables
     hosts       : localhost
     connections  : local
     tasks :
