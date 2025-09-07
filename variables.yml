@@ -32,20 +32,19 @@
        ansible.builtin.debug:
          msg: "x - {{ x }}, y - {{ y }}, z - {{ z }}"
 
- - name:  Variable declaration Types
-   hosts:  localhost
-   connection:  local
+ - name: Variable declaration Types
+   hosts: localhost
+   connection: local
    vars:
-     x:  abc
+     x: abc
      y:
        - 100
        - 200
      z:
-       url:  sample
-       domain:  example.com
+       url: sample
+       domain: example.com
    tasks:
-     - name:  Print url
+     - name: Print variables
        ansible.builtin.debug:
-         msg: "x - {{ x }} , y - {{ y[0] }} ,z - {{ z[domain]  }}"
-
+         msg: "x - {{ x }}, y - {{ y[0] }}, z - {{ z.domain }}"
 
