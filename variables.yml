@@ -11,7 +11,7 @@
 
 
 
- - name        : Task level variables
+
    hosts       : localhost
    connections : local
    tasks :
