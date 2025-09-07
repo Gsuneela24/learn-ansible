@@ -10,3 +10,16 @@
     ansible.builtin.debug :
      msg : url - {{ url }}
 
+
+ - name        : Task level variables
+   hosts       : localhost
+   connections : local
+   tasks :
+    - name : Print url
+      ansible.builtin.debug :
+       msg  : url - {{ url }}
+      vars :
+        url  :  play.example.com
+
+
+
