@@ -1,14 +1,14 @@
  #in ansible variables can be declared  at multiple levels
  #In ansible variables can be accessed with {{ }} and ${}
- - name  : Play level variables
-   hosts : localhost
-   connections: local
-   vars :
-   url  : play.example.com
-   tasks :
-    - name : print url
-      ansible.builtin.debug :
-        msg : url - {{ url }}
+ - name: Play level variables
+   hosts: all
+   vars:
+     msg : play.example.com
+   tasks:
+     - name: Print url
+       ansible.builtin.debug:
+         msg: url - {{ url }}
+
 
 
  - name        : Task level variables
