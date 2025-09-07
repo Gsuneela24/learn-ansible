@@ -20,7 +20,7 @@
          url: play.example.com
 
 
-- name : variable types
+- name: variable types
   hosts: localhost
   connections : local
   vars :
